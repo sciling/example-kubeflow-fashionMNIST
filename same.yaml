@@ -1,0 +1,20 @@
+apiVersion: projectsame.io/v1alpha1
+metadata:
+    name: FashionMNIST
+    version: 0.0.0
+workflow:
+    type: kubeflow
+    parameters:
+        kubeflowVersion: 1.2
+        kubeflowNamespace: kubeflow # Only support Kubeflow namespace
+        credentialFile: porter-kfp
+pipeline:
+    name: "training"
+    description: "An example pipeline that trains a model to perform clothing catagory prediction"
+    package: "code/pipelines/pipeline.py"
+run:
+    name: "default"
+    parameters:
+        data_path: /mnt
+        model_file: mnist_model.h5
+        image_number: 0
