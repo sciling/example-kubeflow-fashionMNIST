@@ -2,12 +2,12 @@ from unittest import TestCase
 import unittest
 import sys
 sys.path.append('..')
-import src.confusion_matrix as confusion_matrix
+import src.visualization.confusion_matrix as confusion_matrix
 import json
 import pathlib
 
 
-DATA_DIR = f"{pathlib.Path(__file__).parent.absolute()}/../data/test"
+DATA_DIR = f"{pathlib.Path(__file__).parent.absolute()}/../../data/test"
 
 
 class TestTrain(TestCase):
