@@ -23,7 +23,7 @@ In this example we use:
 
 * **Kubeflow pipelines** - [Kubeflow Pipelines](https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/) is a machine learning workflow platform that is helping data scientists and ML engineers tackle experimentation and productionization of ML workloads. It allows users to easily orchestrate scalable workloads using an SDK right from the comfort of a Jupyter Notebook.
 
-**Note:** This notebook is to be run on a notebook server inside the Kubeflow environment. 
+**Note:** This notebook is to be run on a notebook server inside the Kubeflow environment.
 
 The [Fashion MNIST](https://github.com/zalandoresearch/fashion-mnist)  dataset contains 70,000 grayscale images in 10 clothing categories. Each image is 28x28 pixels in size. We chose this dataset to demonstrate the funtionality of Kubeflow Pipelines without introducing too much complexity in the implementation of the ML model.
 
@@ -54,12 +54,12 @@ This component performs the following operations:
     3. Saves the image, prediction and confidence inside a file generated as an OutputPath Artifact(results_path).
     4. Saves true and predicted labels, as well as class names to pass it later     to the confusion matrix.
     5. Generate accuracy as metrics
-    
+
 ##### 3. Confusion matrix ([code](./src/confusion_matrix.py))
 This component is passed the labels directory(which contains true and predicted labels, as well as class names) and generates a confusion matrix that kubeflow UI can understand.This function can be reused in other pipelines if given the appropiate parameters.
 
 # File generation #
-To generate the pipeline from the python file, execute the following command: 
+To generate the pipeline from the python file, execute the following command:
 
 ```python3 pipeline.py```
 
@@ -72,7 +72,7 @@ Once the pipeline has been created, we can upload the generated zip file in kube
 
 # Experimental results #
 
-In this section we will replicate the results for the fashion experiment. 
+In this section we will replicate the results for the fashion experiment.
 The pipeline outputs are a confusion matrix ,a loss plot and metrics for the accuracy of the model, from which metrics can be directly compared.
 We can see them in the visualizations of the pipeline or in the Run Output Tab of the Run.
 
@@ -87,17 +87,17 @@ In order to check the validity of the pipeline, we are going to execute a run wi
 
 ### Loss plot ###
 
-![lossplot.png](./data/images/loss_plot.png)
+![lossplot.png](./code/data/images/loss_plot.png)
 
 ### Confusion Matrix ###
 
-![confmatrix.png](./data/images/confusion_matrix.png)
+![confmatrix.png](./code/data/images/confusion_matrix.png)
 
 ### Metrics ###
 The original results are shown in https://www.tensorflow.org/tutorials/keras/classification#evaluate_accuracy. In particular, the results for the the fashion task are an accuracy of 0.8693000078201294
 
 In our replication, we get similar results:
-![metrics.png](./data/images/metrics.png)
+![metrics.png](./code/data/images/metrics.png)
 
 If we increase the number of epochs to 100, and the validation split to 0.10, the results remain more or less the same: 0.8819
 
