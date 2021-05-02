@@ -14,7 +14,3 @@ pipeline:
     package: "code/pipelines/pipeline.py"
 run:
     name: "default"
-    parameters:
-        data_path: /mnt
-        model_file: mnist_model.h5
-        image_number: 0
