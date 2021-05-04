@@ -1,12 +1,13 @@
-from unittest import TestCase
-import unittest
 import sys
-sys.path.append('..')
-import src.models.predict_model as test
-import tempfile
+import unittest
+from unittest import TestCase
+
+sys.path.append("..")
 import os
 import pathlib
+import tempfile
 
+import src.models.predict_model as test
 
 DATA_DIR = f"{pathlib.Path(__file__).parent.absolute()}/../../data/test"
 
@@ -20,7 +21,11 @@ class TestTrain(TestCase):
         labels_directory = tempfile.mkdtemp()
 
         # Test call
-        test.test(data_path=DATA_DIR, results_path=results_file.name, labels_dir=labels_directory)
+        test.test(
+            data_path=DATA_DIR,
+            results_path=results_file.name,
+            labels_dir=labels_directory,
+        )
 
         # Check the labels are correctly created in the directory
         self.assertIn("true_labels.txt", os.listdir(labels_directory))
@@ -31,5 +36,5 @@ class TestTrain(TestCase):
         self.assertNotEqual(os.path.getsize(results_file.name), 0)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
