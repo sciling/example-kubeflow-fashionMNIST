@@ -2,7 +2,7 @@ from unittest import TestCase
 import unittest
 import sys
 sys.path.append('..')
-import src.visualization.confusion_matrix as confusion_matrix
+import visualization.confusion_matrix as confusion_matrix
 import json
 import pathlib
 

@@ -2,7 +2,7 @@ import unittest
 from unittest import TestCase
 import sys
 sys.path.append('..')
-import src.models.train_model as train
+import models.train_model as train
 import tempfile
 import os
 import json

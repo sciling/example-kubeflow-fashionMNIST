@@ -25,6 +25,7 @@ sklearn = "^0.0"
 nbdev = "^1.1.12"
 setuptools = "^52.0.0"
 githubactioncontexthelper = "^0.0.7"
+kfp = "^1.4.0"
 
 [tool.poetry.dev-dependencies]
 
