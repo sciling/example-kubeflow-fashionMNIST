@@ -70,7 +70,7 @@ jobs:
     #   id: python_linting
     #   run: |
     #     python3 -m flake8 src  --count --config=../.flake8 --show-source --statistics
-    
+
     - name: Move generated code to new dir
       id: move_code
       run: |

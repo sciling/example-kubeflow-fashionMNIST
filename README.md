@@ -104,4 +104,3 @@ If we increase the number of epochs to 100, and the validation split to 0.10, th
 # Acknowledgements
 
 This work is based on the github project [From Notebook to Kubeflow Pipeline using Fashion MNIST](https://github.com/manceps/fashion-mnist-kfp-lab/blob/master/KF_Fashion_MNIST.ipynb) under the [MIT License](https://github.com/manceps/fashion-mnist-kfp-lab/blob/master/LICENSE).
-
