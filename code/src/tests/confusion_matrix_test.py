@@ -2,7 +2,7 @@ import sys
 import unittest
 from unittest import TestCase
 
-sys.path.append("..")
+sys.path.append("../..")
 import json
 import pathlib
 

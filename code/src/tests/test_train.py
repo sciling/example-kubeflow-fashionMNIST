@@ -2,12 +2,12 @@ import sys
 import unittest
 from unittest import TestCase
 
-sys.path.append("..")
+sys.path.append("../..")
 import json
 import os
 import tempfile
 
-import models.train_model as train
+import src.models.train_model as train
 
 
 class TestTrain(TestCase):

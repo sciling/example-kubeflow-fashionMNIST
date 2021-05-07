@@ -2,11 +2,11 @@ import sys
 import unittest
 from unittest import TestCase
 
-sys.path.append("..")
+sys.path.append("../..")
 import json
 import pathlib
 
-import visualization.confusion_matrix as confusion_matrix
+import src.visualization.confusion_matrix as confusion_matrix
 
 DATA_DIR = f"{pathlib.Path(__file__).parent.absolute()}/../../data/test"
 
