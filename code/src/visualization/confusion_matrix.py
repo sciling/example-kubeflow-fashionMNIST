@@ -5,7 +5,9 @@ import kfp.components as comp
 
 def confusion_matrix(
     labels_dir: comp.InputPath(),
-) -> typing.NamedTuple("conf_m_result", [("mlpipeline_ui_metadata", "UI_metadata")]):
+) -> typing.NamedTuple(
+    "conf_m_result", [("mlpipeline_ui_metadata", "UI_metadata")]  # noqa: F821
+):
     import json
     from collections import namedtuple
 

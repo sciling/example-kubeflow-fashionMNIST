@@ -9,7 +9,9 @@ def train(
     validation_split,
     data_path: comp.OutputPath(),
     lossplot_path: comp.OutputPath(str),
-) -> typing.NamedTuple("loss_plot", [("mlpipeline_ui_metadata", "UI_metadata")]):
+) -> typing.NamedTuple(
+    "loss_plot", [("mlpipeline_ui_metadata", "UI_metadata")]  # noqa: F821
+):
 
     import base64
     import json

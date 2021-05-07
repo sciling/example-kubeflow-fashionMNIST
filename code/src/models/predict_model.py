@@ -7,7 +7,7 @@ def test(
     data_path: comp.InputPath(),
     results_path: comp.OutputPath(),
     labels_dir: comp.OutputPath(),
-) -> typing.NamedTuple("Outputs", [("mlpipeline_metrics", "Metrics")]):
+) -> typing.NamedTuple("Outputs", [("mlpipeline_metrics", "Metrics")]):  # noqa: F821
     import json
     import os
 
